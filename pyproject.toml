@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prescptr-gemini"
+version = "0.1.0"
+description = "Production-oriented reference implementation: Gemini agents under OpenShell sandbox governance"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.12"
+authors = [
+    { name = "OpenShell & Gemini Community" }
+]
+keywords = [
+    "openshell",
+    "gemini",
+    "llm-security",
+    "sandboxing",
+    "landlock",
+    "ai-governance",
+    "prompt-injection"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "ruff>=0.3.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/your-org/prescptr-gemini-openshell"
+Repository = "https://github.com/your-org/prescptr-gemini-openshell.git"
+Documentation = "https://github.com/your-org/prescptr-gemini-openshell#readme"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+exclude = [
+    ".venv",
+    "runtime",
+    "evidence"
+]

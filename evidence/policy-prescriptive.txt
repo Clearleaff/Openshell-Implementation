@@ -1,0 +1,50 @@
+Version:      2
+Hash:         d2a65708029ac4b5ad22b7ca89a4bfe3a2d4db47aa294c720170ca761f5a2f79
+Status:       Effective
+Source:       sandbox
+Config rev:   18115335484070558927
+---
+version: 1
+filesystem_policy:
+  include_workdir: false
+  read_only:
+    - /usr
+    - /lib
+    - /lib64
+    - /etc
+    - /app
+    - /run/agent-config
+    - /var/log
+    - /proc
+    - /dev/urandom
+  read_write:
+    - /tmp
+    - /dev/null
+landlock:
+  compatibility: hard_requirement
+process:
+  run_as_user: "10001"
+  run_as_group: "10001"
+network_policies:
+  control_plane:
+    name: control_plane
+    endpoints:
+      - host: host.openshell.internal
+        port: 8765
+        protocol: rest
+        enforcement: enforce
+        rules:
+          - allow:
+              method: GET
+              path: /v1/telemetry/CNC-01
+          - allow:
+              method: POST
+              path: /v1/infer
+          - allow:
+              method: POST
+              path: /v1/events
+          - allow:
+              method: POST
+              path: /v1/drafts
+    binaries:
+      - path: /usr/local/bin/python3.12

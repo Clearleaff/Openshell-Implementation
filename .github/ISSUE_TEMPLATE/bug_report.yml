@@ -1,0 +1,39 @@
+name: Bug Report
+description: Report an issue or unexpected behavior in PRESCPTR
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for reporting an issue! Please provide as much detail as possible.
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Python version, OpenShell version, Docker version
+      placeholder: Ubuntu 24.04, Python 3.12, OpenShell 0.1.5, Docker 26.0
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: What commands did you run?
+      placeholder: |
+        1. python3 scripts/init.py --model gemini-2.5-flash
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior / Trace Logs
+      description: Error message, trace output, or audit log excerpts.
+    validations:
+      required: true

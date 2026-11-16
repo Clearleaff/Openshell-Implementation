@@ -1,0 +1,31 @@
+test_audit_unavailable_stops_before_action (test_system.AgentTests.test_audit_unavailable_stops_before_action) ... ok
+test_model_failure_no_fallback (test_system.AgentTests.test_model_failure_no_fallback) ... ok
+test_real_loop_contract_preserves_signature (test_system.AgentTests.test_real_loop_contract_preserves_signature) ... ok
+test_text_only_is_incomplete (test_system.AgentTests.test_text_only_is_incomplete) ... ok
+test_tool_budget (test_system.AgentTests.test_tool_budget) ... ok
+test_truncation_not_success (test_system.AgentTests.test_truncation_not_success) ... ok
+test_unknown_tool_no_execution (test_system.AgentTests.test_unknown_tool_no_execution) ... ok
+test_attack_in_tool_output (test_system.GovernanceTests.test_attack_in_tool_output) ... ok
+test_audit_transaction_failure_rolls_back (test_system.GovernanceTests.test_audit_transaction_failure_rolls_back) ... ok
+test_authentication (test_system.GovernanceTests.test_authentication) ... ok
+test_conflict (test_system.GovernanceTests.test_conflict) ... ok
+test_cross_machine (test_system.GovernanceTests.test_cross_machine) ... ok
+test_cross_run_evidence (test_system.GovernanceTests.test_cross_run_evidence) ... ok
+test_daily_budget (test_system.GovernanceTests.test_daily_budget) ... ok
+test_diagnosis_tool_declarations (test_system.GovernanceTests.test_diagnosis_tool_declarations) ... ok
+test_extra_fields (test_system.GovernanceTests.test_extra_fields) ... ok
+test_http_auth_and_dispatch (test_system.GovernanceTests.test_http_auth_and_dispatch) ... ok
+test_idempotency (test_system.GovernanceTests.test_idempotency) ... ok
+test_inference_budget (test_system.GovernanceTests.test_inference_budget) ... ok
+test_lab_canary_positive_control (test_system.GovernanceTests.test_lab_canary_positive_control) ... ok
+test_missing_evidence (test_system.GovernanceTests.test_missing_evidence) ... ok
+test_no_actuation (test_system.GovernanceTests.test_no_actuation) ... ok
+test_persisted_budget_restart (test_system.GovernanceTests.test_persisted_budget_restart) ... ok
+test_readonly_role (test_system.GovernanceTests.test_readonly_role) ... ok
+test_stale_evidence (test_system.GovernanceTests.test_stale_evidence) ... ok
+test_valid_draft (test_system.GovernanceTests.test_valid_draft) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 1.961s
+
+OK
